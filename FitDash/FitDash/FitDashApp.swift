@@ -1,0 +1,13 @@
+import SwiftUI
+
+@main
+struct FitDashApp: App {
+    @AppStorage("isDarkMode") private var isDarkMode = true
+
+    var body: some Scene {
+        WindowGroup {
+            MainTabView()
+                .preferredColorScheme(isDarkMode ? .dark : .light)
+        }
+    }
+}
